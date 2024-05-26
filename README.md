@@ -1,10 +1,8 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Bu, create-next-appile önyüklenen bir Next.js projesidir.
 
-## Getting Started
 
-First, run the development server:
+İlk önce geliştirme sunucusunu çalıştırın:
 
-```bash
 npm run dev
 # or
 yarn dev
@@ -12,29 +10,27 @@ yarn dev
 pnpm dev
 # or
 bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Sonucu görmek için http://localhost:3000 adresini tarayıcınızla açın.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+pages/index.tsx dosyasını değiştirerek sayfayı düzenlemeye başlayabilirsiniz. Siz dosyayı düzenledikçe sayfa otomatik olarak güncellenir.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+API rotalarına http://localhost:3000/api/hello adresinden erişilebilir. Bu uç nokta pages/api/hello.ts'da düzenlenebilir.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+pages/api dizini /api/* ile eşlenir. Bu dizindeki dosyalar, React sayfaları yerine API rotaları olarak değerlendirilir.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Bu proje, özel bir Google Yazı Tipi olan Inter'i otomatik olarak optimize etmek ve yüklemek için next/font'ı kullanır.
 
-## Learn More
+Next.js hakkında daha fazla bilgi edinmek için aşağıdaki kaynaklara göz atın:
 
-To learn more about Next.js, take a look at the following resources:
+Next.js Belgeleri - Next.js özellikleri ve API'si hakkında bilgi edinin.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Next.js'yi öğrenin - etkileşimli bir Next.js eğitimi.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Next.js GitHub deposuna göz atabilirsiniz; geri bildirimleriniz ve katkılarınız memnuniyetle karşılanacaktır!
 
-## Deploy on Vercel
+Vercel'de dağıt 
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Next.js uygulamanızı dağıtmanın en kolay yolu Next.js yaratıcılarının Vercel Platformunu kullanmaktır.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Daha fazla ayrıntı için Next.js dağıtım belgelerimize göz atın.
