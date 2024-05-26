@@ -1,0 +1,64 @@
+// schema.prisma
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url = env("POSTGRES_PRISMA_URL") // uses connection pooling
+  directUrl = env("POSTGRES_URL_NON_POOLING") // uses a direct connection
+}
+
+model Product {
+  id            Int       @default(autoincrement()) @id
+  title         String
+  price         String
+  image         String
+  category      Category  @relation(fields: [categoryId], references: [id])
+  categoryId    Int
+  status        Int       @default(1)
+  createdAt     DateTime  @default(now()) @map(name: "created_at")
+  updatedAt     DateTime  @updatedAt @map(name: "updated_at")
+  @@map(name: "products")
+}
+
+model Category {
+  id            Int       @default(autoincrement()) @id
+  name          String?
+  status        Int       @default(1)
+  createdAt     DateTime  @default(now()) @map(name: "created_at")
+  updatedAt     DateTime  @updatedAt @map(name: "updated_at")
+  products      Product[]
+  @@map(name: "categories")
+}
+
+model Order {
+  id            Int       @default(autoincrement()) @id
+  items         Json[]
+  table         Table     @relation(fields: [tableId], references: [id])
+  tableId       Int
+  form          Json
+  total         Float
+  createdAt     DateTime  @default(now()) @map(name: "created_at")
+  updatedAt     DateTime  @updatedAt @map(name: "updated_at")
+  @@map(name: "orders")
+}
+
+model Table {
+  id            Int       @default(autoincrement()) @id
+  name          String?
+  createdAt     DateTime  @default(now()) @map(name: "created_at")
+  updatedAt     DateTime  @updatedAt @map(name: "updated_at")
+  orders        Order[]
+  @@map(name: "tables")
+}
+
+model Admin {
+  id            Int       @default(autoincrement()) @id
+  email         String    @unique
+  password      String
+  createdAt     DateTime  @default(now()) @map(name: "created_at")
+  updatedAt     DateTime  @updatedAt @map(name: "updated_at")
+  @@map(name: "admins")
+}
