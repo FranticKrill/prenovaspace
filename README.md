@@ -11,6 +11,8 @@ pnpm dev
 # or
 bun dev
 
+
+
 Sonucu görmek için http://localhost:3000 adresini tarayıcınızla açın.
 
 pages/index.tsx dosyasını değiştirerek sayfayı düzenlemeye başlayabilirsiniz. Siz dosyayı düzenledikçe sayfa otomatik olarak güncellenir.
